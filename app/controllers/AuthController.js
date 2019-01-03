@@ -16,7 +16,7 @@ module.exports = {
 
         // }).then(function(products) {
         //     console.log("product", products);
-            res.render('dashboard', {title: 'ShopEasy - Admin Dashboard' });
+        res.render('dashboard', { title: 'ShopEasy - Admin Dashboard' });
 
         // });
     },
@@ -25,6 +25,23 @@ module.exports = {
     },
     addproduct: function(req, res) {
         res.render('addproduct', { title: 'Product' });
+    },
+    orders_in_process: function(req, res) {
+        Models.orders.findAll({ where: { status: 'in process' } }).then(function(products) {
+            // console.log("product", products);
+            res.render('orders_in_process', { data: products, title: 'Orders In process' });
+
+        });
+    },
+    orders_completed: function(req, res) {
+        Models.orders.findAll({ where: { status: 'completed' } }).then(function(products) {
+            // console.log("product", products);
+            res.render('orders_completed', { data: products, title: 'Orders Completed' });
+
+        });
+    },
+     customerlogin: function(req, res) {
+        res.render('customerlogin', { title: ' customer login' });
     }
 
 }

@@ -14,10 +14,16 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER
       },
+      unit_price: {
+        type: Sequelize.INTEGER
+      },
+      quantity: {
+        type: Sequelize.STRING
+      },
       amount: {
         type: Sequelize.INTEGER
       },
-      type_payment: {
+      payment_type: {
         type: Sequelize.STRING
       },
       status: {

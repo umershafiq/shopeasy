@@ -51,6 +51,9 @@ module.exports = {
         // Models.product.findAll({ limit: 1 }).then(function(products) {
         // console.log("product", products);
         res.render('product', { title: 'ShopEasy Product' });
+    },
+    cart: function(req, res){
+        res.render('cart', {title: 'ShopEasy Cart' });
     }
 
     // addproduct: function(req, res) {

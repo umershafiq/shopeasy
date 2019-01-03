@@ -67,16 +67,16 @@
     <span class="sr-only">Next</span>
   </a>
     </div>
-    <div class="m-3">
+    <div class="m-4">
         <div class="owl-carousel owl-theme">
             <% data.forEach(function(product) { %>
             <div class="item">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top bg-primary" src="..." alt="Card image cap" width="286" height="180">
+                    <img class="card-img-top bg-light" src="..." alt="" width="286" height="180">
                     <div class="card-body">
-                        <h5 class="card-title"> <%= product.name %> </h5>
+                        <h5 class="card-title"> <%= product.title %> </h5>
                         <p class="card-text">
-                            <%= product.description %>
+                            <%= product.size %>
                         </p>
                         <p class="card-text">
                             <%= product.unitprice %>
