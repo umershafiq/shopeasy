@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+
+<body>
+    <% include ./partials/navbar%>
+    <div class="d-flex justify-content-center">
+        <form class="shadow-lg bg-white rounded" action="/login" method="post">
+            <h3 class="text-info text-center">Admin Login</h3>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-outline-primary w-100">Get in</button>
+        </form>
+    </div>
+</body>
+
+</html>

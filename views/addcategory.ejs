@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/adpost.css">
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-xl sticky-top">
+       <% include ./partials/navbar %>
+    </nav>
+
+    <div class="d-flex justify-content-center">
+        <form class="shadow-lg bg-white rounded" action="/addcategory" method="post">
+            <h3 class="text-info text-center">Categories Feed</h3>
+            <div class="form-group">
+                <label for="username">Enter Category name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Category name">
+            </div>
+            <button type="submit" class="btn btn-outline-primary w-100">Get in</button>
+        </form>
+    </div>
+</body>
+
+</html>

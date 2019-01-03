@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('easyshop:server');
+var debug = require('debug')('quick-mvc:server');
 var http = require('http');
 
 /**

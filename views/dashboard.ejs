@@ -1,0 +1,225 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= title %>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="Norina Akhter & Umer Shafiq" name="author">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- third party css -->
+    <link href="/stylesheets/thirdparty.css" rel="stylesheet" type="text/css">
+    <!-- third party css end -->
+    <!-- App css -->
+    <link href="/stylesheets/icons.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="">
+    <!-- Begin page -->
+    <div class="wrapper">
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu" style="">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 657px;">
+                <div class="slimscroll-menu" style="overflow: hidden; width: auto; height: 657px;">
+                    <!-- LOGO -->
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <img src="/images/logo.JPG" alt="ShopEasy" width="100%">
+                        </span>
+                    </a>
+                    <!--- Sidemenu -->
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Products</button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="/process">In process</a></li>
+                                        <li><a href="/completed">Completed</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="card">
+                            <div class="card-header">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" href="/customers">Customer</button>
+                                </h2>
+                            </div>
+                            
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Orders
+        </button>
+      </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="/process">In process</a></li>
+                                        <li><a href="/completed">Completed</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Sidebar -->
+                </div>
+            </div>
+            <!-- Sidebar -left -->
+        </div>
+        
+   
+
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <div class="content">
+                <!-- Topbar Start -->
+                <div class="navbar-custom">
+                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle p-2 bg-primary text-white mt-2 mr-0" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="false" aria-expanded="false">
+                                        <span class="account-user-name">Dominic Keller</span>
+                                </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                <a href="/account" class="dropdown-item notify-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>My Account</span>
+                                    </a>
+                                <a href="/myorders" class="dropdown-item notify-item">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>My Orders</span>
+                                    </a>
+                                <!-- item-->
+                                <a href="/logout" class="dropdown-item notify-item">
+                                        <i class="fa fa-logout"></i>
+                                        <span>Logout</span>
+                                    </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="button-menu-mobile open-left disable-btn">
+                        <i class="fa fa-bars text-primary btn-outline-black"></i>
+                    </button>
+                    <div class="app-search">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="fa fa-search"></span>
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end Topbar -->
+                <!-- Start Content-->
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-light" id="dash-daterange">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-primary border-primary text-white">
+                                                            <i class="fa fa-calendar-alt"></i>
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <h4 class="page-title">Dashboard</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="card widget-flat">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="fa fa-users fa-5x"></i>
+                                    </div>
+                                    <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Customers</h5>
+                                    <h3 class="mt-3 mb-3">36,254</h3>
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col-->
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="card widget-flat">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="fa fa-shopping-bag fa-5x"></i>
+                                    </div>
+                                    <h5 class="text-muted font-weight-normal mt-0" title="Number of Orders">Orders</h5>
+                                    <h3 class="mt-3 mb-3">5,543</h3>
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col-->
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="card widget-flat">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="fa fa-money-bill-alt fa-5x"></i>
+                                    </div>
+                                    <h5 class="text-muted font-weight-normal mt-0" title="Average Revenue">Revenue</h5>
+                                    <h3 class="mt-3 mb-3">$6,254</h3>
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col-->
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="card widget-flat">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="fa fa-gifts fa-5x"></i>
+                                    </div>
+                                    <h5 class="text-muted font-weight-normal mt-0" title="Growth">Products</h5>
+                                    <h3 class="mt-3 mb-3">+ 30.56%</h3>
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col-->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- container -->
+            </div>
+            <!-- content -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- END wrapper -->
+    <!-- bundle -->
+    <script src="/javascripts/app.js"></script>
+    <!-- third party js -->
+    <script src="/javascripts/chart.js"></script>
+    <script src="/javascripts/vector.js"></script>
+    <script src="/javascripts/mill.js"></script>
+    <!-- third party js ends -->
+    <!-- demo app -->
+    <script src="/javascripts/dashboard.js"></script>
+    <!-- end demo js-->
+</body>
+<!-- </html>    <a href="/logout">Logout</a> -->

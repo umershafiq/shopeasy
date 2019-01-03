@@ -1,0 +1,234 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= title %>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="Norina Akhter & Umer Shafiq" name="author">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- third party css -->
+    <link href="/stylesheets/thirdparty.css" rel="stylesheet" type="text/css">
+    <!-- third party css end -->
+    <!-- App css -->
+    <link href="/stylesheets/icons.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="">
+    <!-- Begin page -->
+    <div class="wrapper">
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu" style="">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 657px;">
+                <div class="slimscroll-menu" style="overflow: hidden; width: auto; height: 657px;">
+                    <!-- LOGO -->
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <img src="/images/logo.JPG" alt="ShopEasy" width="100%">
+                        </span>
+                    </a>
+                    <!--- Sidemenu -->
+                    <ul class="metismenu side-nav">
+                        <li class="side-nav-title side-nav-item">Navigation</li>
+                        <li class="side-nav-item">
+                            <a href="/products" class="side-nav-link">
+                                <i class="fa fa-box"></i>                                
+                                <span> Products </span>
+                                 <span class="float-right fa fa-chevron-right mt-1"></span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link">
+                                <i class="fa fa-clipboard-list"></i>
+                                <span> Orders</span>
+                                 <span class="float-right fa fa-chevron-right mt-1"></span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link">
+                                <i class="fa fa-users"></i>
+                                <span> Customers </span>
+                                <span class="float-right fa fa-chevron-right mt-1"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Sidebar -->
+                </div>
+            </div>
+            <!-- Sidebar -left -->
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <div class="content">
+                <!-- Topbar Start -->
+                <div class="navbar-custom">
+                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle p-2 bg-primary text-white mt-2 mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                        <span class="account-user-name">Dominic Keller</span>
+                                </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                <!-- item-->
+                                <div class=" dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                </div>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-account-circle"></i>
+                                        <span>My Account</span>
+                                    </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-account-settings-variant"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-lifebuoy"></i>
+                                        <span>Support</span>
+                                    </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-lock-outline"></i>
+                                        <span>Lock Screen</span>
+                                    </a>
+                                <!-- item-->
+                                <a href="/logout" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-logout"></i>
+                                        <span>Logout</span>
+                                    </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="button-menu-mobile open-left disable-btn">
+                        <i class="fa fa-bars text-primary btn-outline-black"></i>
+                    </button>
+                    <div class="app-search">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="fa fa-search"></span>
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end Topbar -->
+                <!-- Start Content-->
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-light" id="dash-daterange">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-primary border-primary text-white">
+                                                            <i class="fa fa-calendar-alt"></i>
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <h4 class="page-title">Add Product</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Product Name</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Product Name">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Product Number</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Product Number">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Category</span>
+                                    </div>
+                                    <select name="color" class="custom-select">
+                                        <option selected>Color</option>
+                                        <option value="volvo">Red</option>
+                                        <option value="fiat">Green</option>
+                                        <option value="audi">Blue</option>
+                                        <option value="audi">Orange</option>
+                                        <option value="audi">Black</option>
+                                        <option value="audi">White</option>
+                                        <option value="audi">Blue</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Category</span>
+                                    </div>
+                                    <select name="category" class="custom-select">
+                                        <option selected>Color</option>
+                                        <option value="volvo">Red</option>
+                                        <option value="fiat">Green</option>
+                                        <option value="audi">Blue</option>
+                                        <option value="audi">Orange</option>
+                                        <option value="audi">Black</option>
+                                        <option value="audi">White</option>
+                                        <option value="audi">Blue</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Unit Price</span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Unit Price" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <textarea name="" id="" class="w-100 mb-3"></textarea>
+                                <div class="custom-file mb-3">
+                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                                <a href="javascript:void(0);" class="btn btn-danger mb-2 float-right"><i class="fa fa-plus-circle mr-2"></i> Add Products</a>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- end row -->
+                </div>
+                <!-- container -->
+            </div>
+            <!-- content -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- END wrapper -->
+    <!-- bundle -->
+    <script src="/javascripts/app.js"></script>
+    <!-- third party js -->
+    <script src="/javascripts/chart.js"></script>
+    <script src="/javascripts/vector.js"></script>
+    <script src="/javascripts/mill.js"></script>
+    <!-- third party js ends -->
+    <!-- demo app -->
+    <script src="/javascripts/dashboard.js"></script>
+    <!-- end demo js-->
+</body>
+<!-- </html>    <a href="/logout">Logout</a> -->
