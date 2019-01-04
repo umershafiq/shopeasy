@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const categories = sequelize.define('categories', {
-    name: DataTypes.STRING,
+    category_name: DataTypes.STRING,
     parent: DataTypes.INTEGER
   }, {});
   categories.associate = function(models) {

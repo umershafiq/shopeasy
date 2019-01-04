@@ -2,15 +2,15 @@
 const bcrypt = require('bcrypt')
 const LocalStrategy = require('passport-local').Strategy;
 const Models = require('../models/index');
-// const saltRounds = 10
-// const myPlaintextPassword = '123456'
-// const salt = bcrypt.genSaltSync(saltRounds)
-// const passwordHash = bcrypt.hashSync(myPlaintextPassword, salt)
-// const user = {
-// 	email: 'muhammadbinnaeem@game.com',
-// 	passwordHash,
-// 	id: 1
-// }
+const saltRounds = 10
+const myPlaintextPassword = '123456'
+const salt = bcrypt.genSaltSync(saltRounds)
+const passwordHash = bcrypt.hashSync(myPlaintextPassword, salt)
+const user = {
+	email: 'muhammadbinnaeem@game.com',
+	passwordHash,
+	id: 1
+}
 
 module.exports = function (passport) {
 
@@ -20,9 +20,10 @@ module.exports = function (passport) {
 				passwordField : 'password',
 				passReqToCallback : true 
 		},
-		(req, email, password, done) => {
-			Models.users.findOne({email: email}).then(function(user){
-                console.log(user);
+		(req, username, password, done) => {
+            console.log('email is: ',username);
+			Models.users.findOne({where:{email: req.body.username}}).then(function(user){
+                console.log("fetch usre",user);
                     bcrypt.compare(password, user.password, (err, isValid) => {
                         if (err) {
                             return done(err)

@@ -147,58 +147,62 @@
                         </div>
                     </div>
                     <!-- end page title -->
-                    <form action="/addproduct" method="post">
+                    <form action="/edit/product/<%=product.id %>" method="post">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Product Name</span>
                                     </div>
-                                    <input type="text" name="title" class="form-control" placeholder="Product Name">
+                                    <input type="hidden" name="id" class="form-control" placeholder="Product Name" value="<%= product.id%>">
+                                    <input type="text" name="title" class="form-control" placeholder="Product Name" value="<%= product.title%>">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Product Number</span>
                                     </div>
-                                    <input type="text" name="number" class="form-control" placeholder="Product Number">
+                                    <input type="text" name="number" class="form-control" placeholder="Product Number" value="<%= product.number%>" readonly>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">Category</span>
+                                        <span class="input-group-text" value="<%= product.category_id%>">Category</span>
                                     </div>
-                                    <input type="number" name="category_id" class="form-control" placeholder="Product Category">
+                                    <input type="number" name="category_id" class="form-control" placeholder="Product Category" value="<%= product.category_id%>">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Unit Price</span>
                                     </div>
-                                    <input type="number" name="price" id="">
+                                    <input type="number" name="price" id="" value="<%= product.unit_price%>">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Size</span>
                                     </div>
-                                    <input type="text" name="size" id="">
+                                    <input type="text" name="size" id="" value="<%= product.size%>">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Color</span>
                                     </div>
                                     <select name="color" class="custom-select">
-                                        <option value="volvo">Red</option>
-                                        <option value="fiat">Green</option>
-                                        <option value="audi">Blue</option>
-                                        <option value="audi">Orange</option>
-                                        <option value="audi">Black</option>
-                                        <option value="audi">White</option>
-                                        <option value="audi">Blue</option>
+                                        <option value="<%= product.color%>"><%= product.color%>
+                                            
+                                        </option>
+                                        <option value="red">Red</option>
+                                        <option value="green">Green</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="orange">Orange</option>
+                                        <option value="black">Black</option>
+                                        <option value="white">White</option>
+                                        <option value="blue">Blue</option>
                                     </select>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Weight</span>
                                     </div>
-                                    <input type="text" name="weight" class="form-control" placeholder="Unit Price" />
+                                    <input type="text" name="weight" class="form-control" placeholder="Unit Price" value="<%= product.weight%>" />
                                 </div>
                             </div>
                             <div class="col-sm-6">

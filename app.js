@@ -13,7 +13,7 @@ const flash    = require('connect-flash');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));// routes
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));

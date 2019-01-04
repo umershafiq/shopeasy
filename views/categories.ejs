@@ -125,46 +125,32 @@
                                         <table class="table table-centered w-100 dt-responsive nowrap" id="products-datatable">
                                             <thead class="thead-light">
                                                 <tr>
-                                                    <th class="all">Product</th>
-                                                    <th>Product Number</th>
-                                                    <th>Category</th>
-                                                    <th>Price</th>
-                                                    <th>Size</th>
-                                                    <th>Color</th>
-                                                    <th>Weight</th>
+                                                    <th class="all">Category Id</th>
+                                                    <th>Category Name</th>
+                                                    <th>Parent</th>
+
 
                                                     <th style="width: 85px;">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <% data.forEach(function(product) { %>
+                                                <% data.forEach(function(category) { %>
                                                 <tr>
                                                     <td>
-                                                        <%= product.title %>
+                                                        <%= category.id %>
                                                     </td>
                                                     <td>
-                                                        <%= product.number %>
+                                                        <%= category.category_name %>
                                                     </td>
                                                     <td>
-                                                        <%= product.category_id %>
+                                                        <%= category.parent %>
                                                     </td>
-                                                    <td>
-                                                        <%= product.unit_price %>
-                                                    </td>
-                                                    <td>
-                                                        <%= product.size %>
-                                                    </td>
-                                                    <td>
-                                                        <%= product.color %>
-                                                    </td>
-                                                    <td>
-                                                        <%= product.weight %>
-                                                    </td>
+                                                    
                                                     <td class="table-action">
                                                         <ul class="list-inline list-unstyled">
                                                             <li><a href="javascript:void(0);" class="action-icon"> <i class="fa fa-eye"></i></a></li>
-                                                            <li><a href="edit/product/<%=product.id %>" class="action-icon"> <i class="fa fa-edit"></i></a></li>
-                                                            <li><a href="delete/product/<%=product.id %>" class="action-icon"> <i class="fa fa-trash"></i></a></li>
+                                                            <li><a href="edit/category/<%=category.id %>" class="action-icon"> <i class="fa fa-edit"></i></a></li>
+                                                            <li><a href="delete/category/<%=category.id %>" class="action-icon"> <i class="fa fa-trash"></i></a></li>
                                                         </ul>
                                                     </td>
                                                 </tr>

@@ -6,25 +6,8 @@ module.exports = function (app, passport) {
 	app.post('/login', passport.authenticate('local', {
 		successRedirect : '/dashboard', // redirect to the secure dashboard section
 		failureRedirect : '/login', // redirect back to the signup page if there is an error
-		failureFlash : true // allow flash messages
-	}));
-
-	app.get('/customerlogin', AuthController.customerlogin);
-	app.get('/dashboard', _authenticationmiddleware , AuthController.dashboard);
-	app.post('/customerlogin', passport.authenticate('local', {
-		successRedirect : '/dashboard', // redirect to the secure dashboard section
-		failureRedirect : '/customerlogin', // redirect back to the signup page if there is an error
-		failureFlash : true // allow flash messages
-	}));
-
-	// app.get('/customerlogin', AuthController.customerlogin);
-	// app.get('/dashboard', _authenticationMiddleware , AuthController.dashboard);
-	// app.post('/customerlogin', passport.authenticate('local', {
-	// 	successRedirect : '/dashboard', // redirect to the secure dashboard section
-	// 	failureRedirect : '/customerlogin', // redirect back to the signup page if there is an error
-	// 	failureFlash : true // allow flash messages
-	// }));
-
+		failureFlash : 	true // allow flash messages
+	}));		//views		//source control
 	app.get('/signup', AuthController.signup);
 	app.post('/signup',passport.authenticate('local-signup', {
         successRedirect : '/dashboard', // redirect to the secure dashboard section
@@ -46,28 +29,42 @@ module.exports = function (app, passport) {
 	app.get('/products', SiteConroller.products);
 	// app.get('/addproduct', SiteConroller.addproduct);
 	app.get('/addproduct', _authenticationMiddleware , AuthController.addproduct);
+	app.post('/addproduct', _authenticationMiddleware , AuthController.addproduct);
+
 	app.get('/product', SiteConroller.product);
+	app.get('/categories', SiteConroller.categories);
 	app.get('/orders_in_process',  _authenticationMiddleware , AuthController.orders_in_process);
 	app.get('/orders_completed',  _authenticationMiddleware , AuthController.orders_completed);
 	app.get('/cart', SiteConroller.cart);
+	app.get('/edit/category/:id', SiteConroller.getcategory);
+	app.get('/delete/category/:id', SiteConroller.delcategory);
+	app.post('/edit/category/:id', SiteConroller.editcategory);
+	app.get('/edit/product/:id', SiteConroller.getproduct);
+	app.post('/edit/product/:id', SiteConroller.editproduct);
+	app.get('/delete/product/:id', SiteConroller.delproduct);
+	app.post('/add/cart', SiteConroller.addcart);
+	
+	app.get('/search', SiteConroller.search);
+
+
 	
 }
 
 function _authenticationMiddleware(req, res, next) {
-	
+			console.log('done', req.user);	
 			if (req.isAuthenticated()) {
 				return next()
 			}
 			res.redirect('/login')
-
 }
-function _authenticationmiddleware(req, res, next) {
-	
-			if (req.isAuthenticated()) {
-				return next()
-			}
-			res.redirect('/customerlogin')
-
-}
-
+// function _authenticationMiddleware(req, res, next) {
+// 			console.log('done', req.user);
+			
+// 			// console.log(req);
+// 			if (req.isAuthenticated()) {
+// 				if(req.user ===1 && req.path === '/dashboard'  || ) return next()
+// 				// else if(req.user !==1 && req.path === '/home') return next();
+// 			}
+// 			res.redirect('/login')
+// }
 
